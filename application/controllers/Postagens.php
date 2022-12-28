@@ -16,7 +16,7 @@ class Postagens extends CI_Controller {
 	{       
         $dados['categorias'] = $this->categorias;
         $this->load->model('publicacoes_model', 'modelpublicacoes');
-        $dados['postagem'] = $this->modelpublicacoes->pubicacao($id);
+        $dados['postagem'] = $this->modelpublicacoes->publicacao($id);
 
         //Dados a serem enviados para o cabeçalho // 
         $dados ['titulo'] = 'Publicação';
@@ -25,7 +25,7 @@ class Postagens extends CI_Controller {
 
         $this->load->view('frontend/template/html-header' , $dados);
 		$this->load->view('frontend/template/header');
-        $this->load->view('frontend/home');
+        $this->load->view('frontend/publicacao');
         $this->load->view('frontend/template/aside',);
         $this->load->view('frontend/template/footer');
         $this->load->view('frontend/template/html-footer');
